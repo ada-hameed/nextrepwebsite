@@ -1,0 +1,338 @@
+/* Hero with gym banner */
+.about-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  /* background: url('/images/hero-gym-premium.jpg') center/cover no-repeat; */
+}
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.35)
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero-content h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Stats strip */
+.stats-strip {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 24px 0;
+}
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.stat-item svg {
+  font-size: 2rem;
+  color: #60a5fa;
+}
+.stat-item h3 {
+  margin: 0;
+  font-weight: 800;
+  color: #fff;
+  font-size: 2rem !important;
+}
+
+/* About main */
+.section-padding {
+  padding: 80px 0;
+}
+.about-image-wrap {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.about-image-wrap img {
+  width: 100%;
+  display: block;
+}
+.badge-overlay {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.badge-overlay svg {
+  color: #fbbf24;
+}
+
+.about-copy .eyebrow {
+  color: #f97316;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+.about-copy h2 {
+  font-weight: 800;
+  margin: 8px 0 12px;
+}
+.about-copy p {
+  color: #475569;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+.feature {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.feature svg {
+  color: #22c55e;
+  margin-top: 3px;
+}
+.feature h5 {
+  margin: 0;
+  font-weight: 700;
+}
+.feature p {
+  margin: 2px 0 0;
+  color: #64748b;
+}
+
+/* Buttons */
+/* .btn { display:inline-block; padding: 12px 22px; border-radius: 999px; font-weight: 700; text-decoration:none; } */
+.btn.primary {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
+.btn.ghost {
+  border: 2px solid #e2e8f0;
+  color: #0f172a;
+  margin-left: 10px;
+}
+.btn.primary:hover {
+  filter: brightness(1.05);
+}
+.btn.ghost:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+/* Testimonials */
+.testimonial-area {
+  background: #f8fafc;
+}
+.section-head .eyebrow {
+  color: #f97316;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.section-head h2 {
+  font-weight: 800;
+  margin-top: 6px;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+.t-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.t-head h5 {
+  margin: 0;
+  font-weight: 800;
+}
+.t-head span {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+.t-text {
+  color: #334155;
+  font-size: 1.05rem;
+  margin: 8px 0 10px;
+}
+.t-stars {
+  color: #f59e0b;
+}
+
+/* Slick dots */
+.slick-dots li button:before {
+  color: #94a3b8;
+  font-size: 10px;
+}
+.slick-dots li.slick-active button:before {
+  color: #6366f1;
+}
+
+/* Bottom CTA */
+.bottom-cta {
+  padding: 60px 0;
+}
+.cta-wrap {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.15);
+}
+.cta-wrap .btn.ghost {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  margin-left: 12px;
+}
+.cta-wrap .btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Responsive */
+@media (min-width: 992px) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Match Plans typography */
+.about-page,
+.plans-page {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* ABOUT HERO — same text sizes/colors as plans hero */
+.about-hero {
+  position: relative;
+  min-height: 70vh; /* match plans */
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 120px 0 80px; /* match plans spacing */
+  background: url("/images/hero-gym-premium.jpg") center/cover no-repeat;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.35)
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headline and paragraph sizes aligned */
+.hero-content h1 {
+  font-size: 4rem; /* same as .plans-hero-content h1 */
+  font-weight: 900;
+  margin-bottom: 25px;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.about_text {
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.hero-content p {
+  font-size: 1.4rem; /* same as plans hero */
+  opacity: 0.95;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Badge style aligned with plans hero badge */
+.hero-badge {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+/* Stats chips aligned with plans variant */
+.stats-strip,
+.hero-stats {
+  /* margin-top: 28px; */
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  min-width: 130px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 16px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #fff;
+}
+.stat-label {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Keep your existing About main and testimonial styles below as-is */

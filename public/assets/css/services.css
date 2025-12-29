@@ -1,0 +1,28 @@
+/* Only top slider background */
+.slider-area2.slider-area2--bg {
+  position: relative;
+}
+
+/* Dark overlay for readability */
+.slider-area2.slider-area2--bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.35));
+  pointer-events: none;
+}
+
+/* Ensure inner content stays above overlay */
+.slider-area2.slider-area2--bg .slider-height2,
+.slider-area2.slider-area2--bg .hero-cap {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: adjust min-height if needed */
+.slider-area2 .slider-height2 {
+  min-height: 50vh; /* or keep your existing class’ height */
+}
+.services-title {
+  color: #fff !important;
+}
