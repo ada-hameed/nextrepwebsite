@@ -25,7 +25,7 @@ function About() {
   const [activeMembers, setActiveMembers] = useState(0); 
   const [activeTrainers, setActiveTrainers] = useState(0);
 
-  const imageBase = "https://192.168.0.156:7243/"; // image base (no /api)
+  const imageBase = "http://localhost:5228/"; // image base (no /api)
 
   useEffect(() => {
 
